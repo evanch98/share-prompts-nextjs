@@ -22,11 +22,15 @@ const Nav = () => {
 			</Link>
 			{/* Mobile Navigation */}
 			<div className="sm:flex hidden">
-				{isUserLoggedIn ? <div className="flex gap-3 md:gap-5">
-          <Link href="/create-prompt" className="black_btn">
-            Create Post
-          </Link>
-        </div> : <></>}
+				{isUserLoggedIn ? (
+					<div className="flex gap-3 md:gap-5">
+						<Link href="/create-prompt" className="black_btn">
+							Create Post
+						</Link>
+					</div>
+				) : (
+					<></>
+				)}
 			</div>
 		</nav>
 	);
