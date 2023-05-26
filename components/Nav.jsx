@@ -80,6 +80,7 @@ const Nav = () => {
 							className="rounded-full"
 							onClick={() => setToggleDropdown((prev) => !prev)}
 						/>
+						{/* Dropdown */}
 						{toggleDropdown && (
 							<div className="dropdown">
 								<Link
