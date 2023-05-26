@@ -31,7 +31,6 @@ const Nav = () => {
 				/>
 				<p className="logo_text">Share Prompts</p>
 			</Link>
-			{/* Mobile Navigation */}
 			<div className="sm:flex hidden">
 				{isUserLoggedIn ? (
 					<div className="flex gap-3 md:gap-5">
@@ -50,6 +49,36 @@ const Nav = () => {
 								className="rounded-full"
 							/>
 						</Link>
+					</div>
+				) : (
+					<>
+						{providers &&
+							Object.values(providers).map((provider) => (
+								<button
+									type="button"
+									key={provider.name}
+									onClick={() => signIn(provider.id)}
+									className="black_btn"
+								>
+									Sign In
+								</button>
+							))}
+					</>
+				)}
+			</div>
+
+			{/* Mobile Navigation */}
+			<div className="sm:hidden flex relative">
+				{isUserLoggedIn ? (
+					<div className="flex">
+						<Image
+							src="/assets/images/logo.svg"
+							alt="profile pic"
+							width={37}
+							height={37}
+							className="rounded-full"
+							onClick={() => {}}
+						/>
 					</div>
 				) : (
 					<>
