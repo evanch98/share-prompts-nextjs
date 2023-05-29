@@ -2,6 +2,7 @@ import "@styles/globals.css";
 
 import Nav from "@components/Nav";
 import Provider from "@components/Provider";
+import ToasterProvider from "./providers/ToastProvider";
 
 export const metadata = {
 	title: "Share Prompts",
@@ -17,6 +18,7 @@ const RootLayout = ({ children }) => {
 						<div className="gradient" />
 					</div>
 					<main className="app">
+						<ToasterProvider />
 						<Nav />
 						{children}
 					</main>
