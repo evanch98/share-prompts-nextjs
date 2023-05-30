@@ -1,6 +1,6 @@
 # share-prompts-nextjs
 
-Start Date: 25<sup>th</sup> May 2023
+Start Date: 25<sup>th</sup> May 2023<br>
 This simple web application allows users to share their prompts used for AI-powered tools such ChatGPT.
 
 # Goals
