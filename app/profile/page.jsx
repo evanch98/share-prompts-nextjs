@@ -6,13 +6,17 @@ import { useRouter } from "next/navigation";
 import Profile from "@components/Profile";
 
 const ProfilePage = () => {
+
+  const handleEdit = () => {};
+  const handleDelete = () => {};
+
   return (
     <Profile 
       name="My"
       desc="Welcome to your personalized profile page"
       data={[]}
-      handleEdit={}
-      handleDelete={}
+      handleEdit={handleEdit}
+      handleDelete={handleDelete}
     />
   );
 };
