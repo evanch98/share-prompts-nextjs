@@ -7,7 +7,7 @@ import Form from "@components/Form";
 import { toast } from "react-hot-toast";
 
 const CreatePrompt = () => {
-	const { date: session } = useSession();
+	const { data: session } = useSession();
 	const router = useRouter();
 
 	const [submitting, setSubmitting] = useState(false);
