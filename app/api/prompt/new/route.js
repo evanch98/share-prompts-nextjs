@@ -1,6 +1,5 @@
 import { connectToDB } from "@utils/database";
 import Prompt from "@models/prompt";
-import { toast } from "react-hot-toast";
 
 export const POST = async (req) => {
 	const { userId, prompt, tag } = await req.json();
@@ -17,7 +16,6 @@ export const POST = async (req) => {
 
 		return new Response(JSON.stringify(newPrompt), { status: 201 });
 	} catch (error) {
-		toast.error("Failed to create a new prompt.");
 		return new Response("Failed to create a new prompt", { status: 500 });
 	}
 };
