@@ -30,14 +30,14 @@ const CreatePrompt = () => {
 			});
 
 			if (response.ok) {
-        toast.success("Success");
-        router.push("/");
+				toast.success("Success");
+				router.push("/");
 			}
 		} catch (error) {
-      toast.error("Something went wrong");
-    } finally {
-      setSubmitting(false);
-    }
+			toast.error("Something went wrong");
+		} finally {
+			setSubmitting(false);
+		}
 	};
 
 	return (
