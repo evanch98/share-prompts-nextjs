@@ -13,7 +13,7 @@ const ProfilePage = () => {
 	const handleEdit = (post) => {
 		router.push(`/update-prompt?id=${post.id}`)
 	};
-	const handleDelete = () => {};
+	const handleDelete = (post) => {};
 
 	useEffect(() => {
 		const fetchPosts = async () => {
