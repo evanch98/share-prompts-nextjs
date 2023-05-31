@@ -7,9 +7,12 @@ import Profile from "@components/Profile";
 
 const ProfilePage = () => {
 	const { data: session } = useSession();
+	const router = useRouter();
 	const [posts, setPosts] = useState([]);
 
-	const handleEdit = () => {};
+	const handleEdit = (post) => {
+		router.push(`/update-prompt?id=${post.id}`)
+	};
 	const handleDelete = () => {};
 
 	useEffect(() => {
